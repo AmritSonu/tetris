@@ -1,14 +1,17 @@
 {
+  "homepage": "https://AmritSonu.github.io/tetris",
   "name": "react-tetris",
   "version": "1.0.1",
   "description": "使用React、Redux、Immutable编写「俄罗斯方块」。Use Tetact, Redux, Immutable to coding \"Tetris\".",
   "scripts": {
     "start": "webpack-dev-server --progress",
-    "build": "rm -rf ./docs/* && webpack --config ./webpack.production.config.js --progress && ls ./docs"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build ",
+    "build": "rmdir /s /q .\\docs && webpack --config ./webpack.production.config.js --progress && dir .\\docs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chvin/react-tetris.git"
+    "url": "git+https://github.com/AmritSonu/tetris"
   },
   "keywords": [
     "Tetris",
@@ -20,9 +23,8 @@
   "author": "Chvin",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/chvin/react-tetris/issues"
+    "url": "https://github.com/AmritSonu/tetris/issues"
   },
-  "homepage": "https://github.com/chvin/react-tetris#readme",
   "devDependencies": {
     "autoprefixer": "^6.7.2",
     "babel-core": "^6.13.2",
